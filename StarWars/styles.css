@@ -1,0 +1,28 @@
+body {
+    background-color: #111111;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:50px;
+}
+
+h1 {
+    color: #E2E80F;
+    text-align: center;
+    font-size: larger;
+}
+p {
+    color: #eeeeee;
+    font-size:larger;
+    line-height: 110%;
+}
+
+span.credits {
+    color: #49DAFF;
+    cursor: pointer;
+}
+
+#film-description {
+    font-size:smaller;
+    font-style: italic;
+}
+
+

@@ -1,0 +1,24 @@
+h1 {
+    color:darkgreen
+}
+h1,h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+p {
+    line-height: 25px;
+}
+a:link {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.emphasized {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ 
+img {
+    margin-right: 10px;
+}

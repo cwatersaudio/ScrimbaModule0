@@ -1,0 +1,35 @@
+body{
+    background-color: lightyellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+size: 50px;
+text-transform: uppercase;
+text-align: center;
+}
+
+span.email{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.article {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+    
+    }
+
+#classifieds{
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: none;
+    font-variant:small-caps;
+    text-decoration: double;
+}
+
+.ad {
+    display: inline-block;
+    border: 2px solid black;
+
+}
