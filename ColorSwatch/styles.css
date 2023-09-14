@@ -1,3 +1,5 @@
+/* For scrimba module 0 exercise: https://coursework.vschool.io/color-grid-from-scratch/ */
+
 * {
     box-sizing: border-box; 
     font-size: 0px;
@@ -7,8 +9,8 @@ body {
     align-items:center;
 }
 
-
-.pinkbox {
+/* Original assignment using simple CSS classes */
+/* .pinkbox {
     font-size: 0;
     box-sizing:border-box; 
     background-color: #F5C6D6;
@@ -59,4 +61,47 @@ body {
     margin: auto;
     border: orangered dashed 3px;
 
+} */
+
+/* Updated using CSS Grid */
+
+.bigbox {
+    padding: 5px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    border: orangered dashed 3px;
+    display:grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: repeat(4, 80px);
+    gap: 5px;
+}
+
+.pinkbox {
+    background-color: #F5C6D6;
+    grid-column: 1/5;
+   
+}
+
+.magentabox {
+    background-color: #EE2E84;
+    grid-row: 2;
+    
+}
+
+.bluebox {
+    background-color: #2e9eee;
+    grid-row: 3;
+    grid-row-end: 4;
+}
+.greenbox {
+    background-color: #8DC63F;
+    grid-row: 4;
+    grid-column: 1 / 4;
+}
+
+.orangebox {
+    background-color: #E76E34;
+    grid-column: 4 /5;
+    grid-row: 4;
 }
