@@ -79,7 +79,7 @@ body {
 
 .pinkbox {
     background-color: #F5C6D6;
-    grid-column: 1/5;
+    grid-column: span 4;
    
 }
 
@@ -92,12 +92,12 @@ body {
 .bluebox {
     background-color: #2e9eee;
     grid-row: 3;
-    grid-row-end: 4;
+    grid-column: span 2;
 }
 .greenbox {
     background-color: #8DC63F;
     grid-row: 4;
-    grid-column: 1 / 4;
+    grid-column: span 3;
 }
 
 .orangebox {
