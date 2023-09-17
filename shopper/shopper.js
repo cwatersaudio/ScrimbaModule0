@@ -6,6 +6,15 @@ var cart2;
 var cart3;
 var cart4;
 
+const shopperName = document.getElementById("shopperEl");
+const shopButton = document.getElementById("cartGen");
+const cartEl = document.getElementById("cart-contents");
+
+
+shopButton.addEventListener('click', () => {    
+  makeCart();
+  cartEl.innerHTML =  printCart();
+});
 var shopper = {
   firstName: "Jim",
   lastName: "Stones",
@@ -13,7 +22,7 @@ var shopper = {
    shopperCart: []
 
   }
-
+shopperName.innerHTML = `${shopper.firstName} ${shopper.lastName}`;
 function makeCart () { //altered this function to not recieve any parameters
   let cartItems = [];
   for (i=0; i < 4; i++) {  //creates the random cart indexes
@@ -34,8 +43,8 @@ function randInt (min, max) {
 
 
 function printCart() {
-  // return shopper.shopperCart;
-  console.log(shopper.shopperCart)
+  return shopper.shopperCart;
+  // console.log(shopper.shopperCart)
 }
 
 makeCart();
