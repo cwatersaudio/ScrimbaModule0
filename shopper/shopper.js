@@ -1,54 +1,51 @@
 
 // Create an object:
-let grocerycart = ["plums","pears","durian fruit","lemons","limes","yams","steak tips","lamb shank","tortillas","tuna","ham hocks"];
+let groceryCart = ["plums","pears","durian fruit","lemons","limes","yams","steak tips","lamb shank","tortillas","tuna","ham hocks"];
+var cart1;
+var cart2;
+var cart3;
+var cart4;
 
-function makeaCart (i1, i2, i3, i4) {
-  const cartItems = [i1,i2,i3,i4];
-  const cart = [];
+const shopperName = document.getElementById("shopperEl");
+const shopButton = document.getElementById("cartGen");
+const cartEl = document.getElementById("cart-contents");
 
-  for (let index = 0; index < cart.length; index++) {
-    cart.push(grocerycart[cartItems[index]])
-    
+
+shopButton.addEventListener('click', () => {    
+  makeCart();
+  cartEl.innerHTML =  printCart();
+});
+var shopper = {
+  firstName: "Jim",
+  lastName: "Stones",
+
+   shopperCart: []
+
   }
-}
+shopperName.innerHTML = `${shopper.firstName} ${shopper.lastName}`;
+function makeCart () { //altered this function to not recieve any parameters
+  let cartItems = [];
+  for (i=0; i < 4; i++) {  //creates the random cart indexes
+    cartItems[i] = randInt(0,8);
+    cartItems[i] = groceryCart[cartItems[i]]; //is this insane?
+    console.log(cartItems[i])
+  }
 
+  for (let k = 0; k < cartItems.length; k++) { 
+    shopper.shopperCart[k] = cartItems[k];
+}
+}
 
 
 function randInt (min, max) { 
     return Math.floor(Math.random() * (max - min)  + min);
 }
 
-function getCartContents (x, y, z, w) {
-    let cartContents = [];
-    cartContents.push(grocerycart[x]),
-    cartContents.push(grocerycart[y]),
-    cartContents.push(grocerycart[z]),
-    cartContents.push(grocerycart[w])
 
-    return cartContents;
-    
+function printCart() {
+  return shopper.shopperCart;
+  // console.log(shopper.shopperCart)
 }
-var shopperCart = [];
 
-var shopper = {
-  firstName: "Jim",
-  lastName: "Stones",
-  rewardsHolder: true,
-  
-   cart1: randInt (0, 8),
-   cart2: randInt (0, 8),
-   cart3: randInt (0, 8),
-   cart4: randInt (0, 8),
-
-   shoppingCart: getCartContents(cart1,cart2,3,2)
-  }
-
-  console.log(shopper.cart1);
-  console.log(shopper.cart2);
-  console.log(shopper.cart3);
-  console.log(shopper.cart4);
-  console.log(shopper.shoppingCart);
-
-
-
-
+makeCart();
+printCart();
