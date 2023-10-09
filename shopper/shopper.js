@@ -20,7 +20,6 @@ var shopper = {
   lastName: "Stones",
 
    shopperCart: []
-
   }
 shopperName.innerHTML = `${shopper.firstName} ${shopper.lastName}`;
 function makeCart () { //altered this function to not recieve any parameters
