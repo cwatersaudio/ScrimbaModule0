@@ -42,8 +42,12 @@ function randInt (min, max) {
 
 
 function printCart() {
-  return shopper.shopperCart;
-  // console.log(shopper.shopperCart)
+  printedCart = [];
+  for (i=0; i< shopper.shopperCart.length ; i++) { //reworked this so there'd be a space in the array items
+    printedCart[i]= " " + shopper.shopperCart[i]
+  }
+  return (printedCart)
+  console.log(shopper.shopperCart)
 }
 
 makeCart();
